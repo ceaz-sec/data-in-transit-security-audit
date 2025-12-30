@@ -1,0 +1,61 @@
+DATA IN TRANSIT AUDIT OF FAANG WEBSITES 
+
+
+Deep Security & Privacy Audit: facebook.com
+------------------------------------------------------------
+TLS_Protocol           [+] Established via ECDHE-ECDSA-AES128-GCM-SHA256
+Forward_Secrecy        [+] PFS supported
+Downgrade_Attack       [+] Server blocks legacy TLS 1.0
+HSTS_Privacy           [+] Secure Redirect to HTTPS (HSTS inherited)
+CAA_Policy             [+] Authorized CAs: 0 issue "digicert.com; account=271b0beda0771d006aa3a6c11b05187d456d6c239b46cb5241196095b09c92af" 
+MTA-STS_Email          [+] Email encryption enforced
+------------------------------------------------------------
+
+
+
+Deep Security & Privacy Audit: amazon.com
+------------------------------------------------------------
+TLS_Protocol           [+] Established via ECDHE-RSA-AES128-GCM-SHA256
+Forward_Secrecy        [+] PFS supported
+Downgrade_Attack       [+] Server blocks legacy TLS 1.0
+HSTS_Privacy           [+] Secure Redirect to HTTPS (HSTS inherited)
+CAA_Policy             [!] No CAA (Any CA can issue)
+MTA-STS_Email          [!] No email privacy policy
+------------------------------------------------------------
+
+
+
+Deep Security & Privacy Audit: apple.com
+------------------------------------------------------------
+TLS_Protocol           [+] Established via ECDHE-ECDSA-AES128-GCM-SHA256
+Forward_Secrecy        [+] PFS supported
+Downgrade_Attack       [+] Server blocks legacy TLS 1.0
+HSTS_Privacy           [+] Secure Redirect to HTTPS (HSTS inherited)
+CAA_Policy             [+] Authorized CAs: 0 issue "pki.apple.com" 0 issuewild "pki.apple.com" 0 iodef "mailto:contact_pki@apple.com" 
+MTA-STS_Email          [!] No email privacy policy
+------------------------------------------------------------
+
+
+
+Deep Security & Privacy Audit: netflix.com
+------------------------------------------------------------
+TLS_Protocol           [+] Established via ECDHE-ECDSA-AES256-GCM-SHA384
+Forward_Secrecy        [+] PFS supported
+Downgrade_Attack       [+] Server blocks legacy TLS 1.0
+HSTS_Privacy           [+] HSTS Enforced
+CAA_Policy             [+] Authorized CAs: 0 issue "letsencrypt.org" 0 issue "digicert.com" 0 issue "pki.goog" 
+MTA-STS_Email          [!] No email privacy policy
+------------------------------------------------------------
+
+
+
+Deep Security & Privacy Audit: google.com
+------------------------------------------------------------
+TLS_Protocol           [+] Established via ECDHE-RSA-CHACHA20-POLY1305
+Forward_Secrecy        [+] PFS supported
+Downgrade_Attack       [+] Server blocks legacy TLS 1.0
+HSTS_Privacy           [!] HSTS missing (Insecure)
+CAA_Policy             [+] Authorized CAs: 0 issue "pki.goog" 
+MTA-STS_Email          [+] Email encryption enforced
+------------------------------------------------------------
+
