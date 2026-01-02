@@ -10,7 +10,10 @@ A high-performance LuaJIT utility designed to audit the resilience and privacy o
 * **Infrastructure Privacy:** Audits DNS records for CAA (Certificate Authority Authorization) and MTA-STS (Email Transport Security).
 
 ## Usage
-* **Example Usage:** ./data-in-transit-security-audit.lua example.com 
+* **Example Usage:** ./data-in-transit-security-audit.lua example.com Rich text printed to the terminal.
+
+## Report
+* **Audit Report:** This tool will generate an AUDITREPORT.md file each time it is ran. Current this is only for one url, soon more or multiple nodes will be added.
 
 ## Installation
 Ensure you have `luajit` and the following libraries installed via LuaRocks:
