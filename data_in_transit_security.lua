@@ -56,6 +56,8 @@ local function audit_tls()
         if tls.getcipherinfo then 
             local info = tls:getcipherinfo()
             cipher = info.name or "Unknown"
+        elseif tls.info then
+            cipher = tls:info("cipher") or "Unkown"
         end
         
         log_event("TLS_Protocol", true, "Established via " .. cipher)
@@ -95,10 +97,13 @@ local function hsts_check()
     local hsts = resp:match("Strict%-Transport%-Security") ~= nil
     local has_preload = resp:match("Strict%-Transport%-Security.-preload") ~= nil
     local secure_redirect = resp:match("Location: https://") ~= nil
+    local has_sub_domains = resp:match("includeSubDomains") ~= nil
 
     if hsts then
         local msg = has_preload and "HSTS Enforced (Preload Requested)" or "HSTS Enforced"
         log_event("HSTS_Privacy", true, msg)
+    elseif has_sub_domains then
+        log_event("HSTS_Privacy", true, "Has Subdomains")
     elseif secure_redirect then
         log_event("HSTS_Privacy", true, "Secure Redirect to HTTPS")
     else
